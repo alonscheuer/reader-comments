@@ -4,17 +4,7 @@ library(quanteda.textstats)
 library(ggpubr)
 
 
-data <- read_csv("spans_inferred.csv") %>%
-    filter(work != "/works/30346350") %>%
-    mutate(additional_functions = str_replace_all(additional_functions, "[\\[\\]' ]", ""),
-           additional_entities = str_replace_all(additional_entities, "[\\[\\]' ]", "")) %>%
-    mutate(prediction = paste(prediction, additional_functions, sep = ","),
-           entities = paste(entities, additional_entities, sep = ";")) %>%
-    mutate(entities = str_split(entities, ";")) %>%
-    mutate(entities = as.character(lapply(entities, function(x) paste(x[which(x != "NA")], collapse = ";")))) %>%
-    mutate(prediction = str_remove_all(prediction, "(,NA|,none|none,[^N]|,$)")) %>%
-    select(-additional_functions, -additional_entities) %>%
-    separate_longer_delim(cols = prediction, delim = ",") %>%
+data <- read_csv("spans_inferred_separated.csv") %>%
     mutate(docid = row_number()) %>%
     mutate(maskedText = tolower(maskedText))
 
