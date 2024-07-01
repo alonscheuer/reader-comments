@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alon/ontologies/2024/2/comment#"
+     xml:base="http://www.semanticweb.org/alon/ontologies/2024/2/comment"
+     xmlns:ao3="https://archiveofourown.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#backwardTargetOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#backwardTargetOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasBackwardTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasBackwardFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasBackwardFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#BackwardFunction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasBackwardTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasBackwardTarget">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasComment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#inThread"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasForwardFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasForwardFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasFunction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasParent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#partOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasRoot -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasRoot">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#rootOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Thread"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#inThread -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#inThread">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Thread"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#induces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#induces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#partOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#rootOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#rootOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#about -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#about">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#spanEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#spanEnd">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#spanOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#spanOrder">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#spanStart -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#spanStart">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#AssertiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#AssertiveFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#BackwardFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#BackwardFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Comment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommissiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommissiveFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommunityFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommunityFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#DirectiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#DirectiveFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#ExpressiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ExpressiveFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ForwardFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Function"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Span"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#Thread -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#Thread"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#agreement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#agreement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#BackwardFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#answer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#answer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#BackwardFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#appreciation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#appreciation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ExpressiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#commitment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#commitment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommissiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#community_interaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#community_interaction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommunityFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#disagreement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#disagreement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#BackwardFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#emotion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#emotion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#ExpressiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#entertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#entertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#DirectiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#feedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#feedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#AssertiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#interpretation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#interpretation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#AssertiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#offer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#offer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#CommissiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#personal_story -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#personal_story">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#AssertiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#question -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#question">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#DirectiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#request -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#request">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#DirectiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alon/ontologies/2024/2/comment#review -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#review">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#AssertiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#f1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/alon/ontologies/2024/2/comment#f2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function Induction</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasFunction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#s1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#f1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#induces"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#f1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#f2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#hasFunction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#s1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/alon/ontologies/2024/2/comment#f2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
